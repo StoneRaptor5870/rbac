@@ -9,12 +9,12 @@ import { PrismaModule } from '../prisma/prisma.module'
   imports: [
     PrismaModule,
     JwtModule.register({
-      secret: 'your_jwt_secret_key', // Replace with environment variable for production
+      secret: 'your_jwt_secret_key',
       signOptions: { expiresIn: '1h' },
     }),
   ],
-  providers: [AuthService, JwtStrategy], // Include JwtStrategy
+  providers: [AuthService, JwtStrategy],
   controllers: [AuthController],
-  exports: [JwtModule], // Export JwtModule for use in other modules
+  exports: [JwtModule],
 })
 export class AuthModule {}
