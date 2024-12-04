@@ -54,3 +54,9 @@
    npx prisma migrate dev
    npm run start:dev
    Navigate to http://localhost:3000
+   if you are using Docker then:
+    - docker-compose build
+    - docker-compose up
+    - docker-compose exec app sh
+      npx prisma migrate dev
+
